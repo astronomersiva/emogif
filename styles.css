@@ -7,6 +7,10 @@ body {
 	margin-top: 10px;
     margin-bottom: -20px;
 }
+#img{
+    float: right;
+    width:75px;
+}
 
 #emotion{
 	padding: .5em .6em;

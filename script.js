@@ -1,5 +1,11 @@
+$(document).ready(function(){
+    var x = new AutoSuggestControl("emotion");        
+});
 $('#emotionSearch').keypress(function(event) { 
+
     //Stop page reload on pressing Enter
+      
+ 
 	if (event.keyCode == 13) {
     	var emotionText = $('#emotion').val();
         var tag = encodeURI(emotionText);
