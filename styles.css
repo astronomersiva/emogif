@@ -1,0 +1,21 @@
+body {
+	margin-right: -5px;
+}
+
+#gif {
+	width: 300px;
+	margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+#emotion{
+	padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "emogif",
+  "description": "A GIF for every emotion.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "http://api.giphy.com/*"
+  ]
+}
