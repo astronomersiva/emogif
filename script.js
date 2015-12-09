@@ -6,7 +6,26 @@ $('#emotionSearch').keypress(function(event) {
         var apiEndpoint = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=" + tag;
         console.log(apiEndpoint);
         //get gif from giphy
+        //loader till image is fetched
+        $('#gif').css({
+            visibility: 'hidden',
+            height: '0'
+        });
+        $('.loading').css({
+            'animation-play-state': 'running',
+            visibility: 'visible',
+            height: '10em'
+        });
         $.get(apiEndpoint, function(json) {
+            $('.loading').css({
+                'animation-play-state': 'paused',
+                visibility: 'hidden',
+                height: '0'
+            });
+            $('#gif').css({
+                visibility: 'visible',
+                height: 'initial'
+            });
             $('#gif').attr('src', json["data"]["image_url"]);
             $('#gif-url').html(json["data"]["image_url"]);
             //copy to clipboard

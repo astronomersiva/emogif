@@ -1,5 +1,6 @@
 body {
 	margin-right: -5px;
+    height: 250px;
 }
 
 #gif {
@@ -15,7 +16,70 @@ body {
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
     vertical-align: middle;
+    margin-left: 20%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.loading  {
+    background: rgba(0, 50, 250, 0);
+    position: relative;
+    margin: 4em auto 0 auto;
+    width: 6em; 
+    height: 0;
+    animation-name:rotate;
+    visibility: hidden;
+}
+
+.loading,
+.loading:before,
+.loading:after  {
+    border-radius: 100%;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+.loading:before,
+.loading:after  {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: inherit; 
+    height: inherit;
+}
+
+.loading:before  {
+    background: rgba(200, 250, 100, 0);
+    animation-name: rotate;
+}
+
+.loading:after  {
+    background: rgba(200, 250, 100, 0);
+    animation-name: rotate;
+}
+
+@keyframes rotate  {
+    0%  {
+        transform: rotateZ(60deg)  translateZ(100);
+        box-shadow: inset 0.8em 0 0 rgba(255, 0, 0, 0.5), 
+                    inset 0 0.8em 0 rgba(252, 150, 0, 0.5), 
+                    inset -0.8em 0 0 rgba(0, 255, 0, 0.5), 
+                    inset 0 -0.8em 0 rgba(0, 150, 255, 0.5);
+    }
+    
+    /* hidden */
+    
+    85%, 100%  {
+    
+    /* 360deg * 10 */
+    
+        transform: rotateZ(3600deg)  translateZ(0);
+        box-shadow: inset 0.8em 0 0 rgba(255, 0, 0, 0.5), 
+                    inset 0 0.8em 0 rgba(252, 150, 0, 0.5), 
+                    inset -0.8em 0 0 rgba(0, 255, 100, 0.5), 
+                    inset 0 -0.8em 0 rgba(10, 150, 255, 0.5);
+    }
 }
